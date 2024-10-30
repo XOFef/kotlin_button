@@ -34,8 +34,8 @@ class SecondActivity : AppCompatActivity() {
         val count :Int = intent.getIntExtra(TOTAL_COUNT, 0)
         val random : Random = Random(0)
         var randomInt :Int = 0
-        if(count > 0){
-            randomInt = random.nextInt(count+1)
+        if(count < 0){
+            randomInt = random.nextInt(count, 0)
         }
         textView_random.text = Integer.toString(randomInt)
         textview_label.text = getString(R.string.random_heading, count)

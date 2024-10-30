@@ -32,7 +32,7 @@ class MainActivity : AppCompatActivity() {
     fun countMe(view: View) {
         val countString = textView.text.toString()
         var count: Int = Integer.parseInt(countString)
-        count+=5
+        count-=100
         textView.text = count.toString();
     }
 
